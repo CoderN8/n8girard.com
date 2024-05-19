@@ -73,7 +73,7 @@ nav ul li a.contact-btn {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('./files/images/Fog.jpg') no-repeat center center/cover;
+    background: url('../images/Fog.jpg') no-repeat center center/cover;
     opacity: 0;
 }
 
@@ -208,15 +208,15 @@ nav ul li a.contact-btn {
 }
 
 #hydrogen {
-    background-image: url('./files/images/Hydrogen-4.png');
+    background-image: url('../images/Hydrogen-4.png');
 }
 
 #factory {
-    background-image: url('./files/images/Factory-2.png');
+    background-image: url('../images/Factory-2.png');
 }
 
 #aufero {
-    background-image: url('./files/images/Aufero-4.png');
+    background-image: url('../images/Aufero-4.png');
 }
 
 /* Modal Styles */
@@ -303,7 +303,7 @@ nav ul li a.contact-btn {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('./files/images/td_reel1_crop.jpg') no-repeat center center/cover;
+    background: url('../images/td_reel1_crop.jpg') no-repeat center center/cover;
     filter: grayscale(1);
     opacity: 1;
     transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -318,7 +318,7 @@ nav ul li a.contact-btn {
 /********** Experience Section ************/
 .experience-section {
     padding: 100px 20px;
-    background: url('./files/images/Roots.jpg') no-repeat center center/cover;
+    background: url('../images/Roots.jpg') no-repeat center center/cover;
     color: #fff;
     display: flex;
     justify-content: space-between;
