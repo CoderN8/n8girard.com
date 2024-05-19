@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nate Girard - Portfolio v8</title>
+	<link href="https://fonts.googleapis.com/css2?family=Headland+One&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./files/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header class="fixed-header">
+        <img src="./files/images/n8girard-logo-dark.png" alt="Logo" class="mylogo">
+        <nav>
+            <ul>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#case-studies">Case studies</a></li>
+                <li><a href="#demo-reel">Demo reel</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#referrals">Referrals</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact" class="contact-btn">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="background"></div>
+        <div class="content">
+            <img src="./files/images/NateCutout.png" alt="Nate Girard" class="figure">
+            <div class="text">
+                <h1>Nate Girard</h1>
+                <h3>I’m a Director of Product</h3>
+                <h5>With a background in UX Design, 3D, and Web Development</h5>
+                <blockquote>
+                    "I’m effective at bringing product vision to reality with cross-functional teams of experts by communicating efficiently at every level of engagement and following through to achieve outstanding results."
+                </blockquote>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/n8girard/"><img src="./files/images/linkedln.svg" alt="LinkedIn"></a>
+                    <a href="https://twitter.com/n8girard"><img src="./files/images/twitter-x.svg" alt="Twitter"></a>
+                    <a href="https://www.behance.net/n8girard"><img src="./files/images/behance.svg" alt="Behance"></a>
+                    <a href="https://dribbble.com/n8girard"><img src="./files/images/dribbble.svg" alt="Dribbble"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section id="case-studies" class="case-studies">
+		<h2>Case Studies</h2>
+		<div class="case-study" id="hydrogen">
+			<div class="overlay"></div>
+			<div class="case">Hydrogen</div>
+		</div>
+		<div class="case-study" id="factory">
+			<div class="overlay"></div>
+			<div class="case">Factory</div>
+		</div>
+		<div class="case-study" id="aufero">
+			<div class="overlay"></div>
+			<div class="case">Aufero</div>
+		</div>
+	</section>
+
+	<!-- Modal structure (hidden by default) -->
+	<div class="modal" id="modal-hydrogen">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Hydrogen Case Study</h2>
+			<!-- Case study content -->
+		</div>
+	</div>
+
+	<div class="modal" id="modal-factory">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Factory Case Study</h2>
+			<!-- Case study content -->
+		</div>
+	</div>
+
+	<div class="modal" id="modal-aufero">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Aufero Case Study</h2>
+			<!-- Case study content -->
+		</div>
+	</div>
+
+    <section id="demo-reel" class="demo-reel-section">
+        <div class="headingbar">
+            <h2>Demo Reel</h2>
+        </div>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <video id="demo-video" controls muted poster="./files/images/td_reel1_crop.jpg">
+                    <source src="./files/videos/TD_Reel.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-poster"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience-section">
+        <div class="experience-wrapper">
+            <div class="experience-subsection">
+                <h2>Experience</h2>
+                <h4>Years of experience in broad categories</h4>
+                <div class="experience-bars">
+                    <!-- Example for one category -->
+                    <div class="experience-bar">
+                        <span class="category">Traditional Art</span>
+                        <div class="bar">
+                            <div class="fill" data-years="34">
+                                <span class="years">34 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-bar">
+                        <span class="category">Digital Art</span>
+                        <div class="bar">
+                            <div class="fill" data-years="30">
+                                <span class="years">30 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-bar">
+                        <span class="category">Graphic Design</span>
+                        <div class="bar">
+                            <div class="fill" data-years="29">
+                                <span class="years">29 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-bar">
+                        <span class="category">Computer Programming</span>
+                        <div class="bar">
+                            <div class="fill" data-years="29">
+                                <span class="years">29 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-bar">
+                        <span class="category">3D</span>
+                        <div class="bar">
+                            <div class="fill" data-years="26">
+                                <span class="years">26 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-bar">
+                        <span class="category">Video Production</span>
+                        <div class="bar">
+                            <div class="fill" data-years="25">
+                                <span class="years">25 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-bar">
+                        <span class="category">Web Design</span>
+                        <div class="bar">
+                            <div class="fill" data-years="23">
+                                <span class="years">23 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-bar">
+                        <span class="category">E-Learning</span>
+                        <div class="bar">
+                            <div class="fill" data-years="22">
+                                <span class="years">22 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-bar">
+                        <span class="category">Visual Effects</span>
+                        <div class="bar">
+                            <div class="fill" data-years="21">
+                                <span class="years">21 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-bar">
+                        <span class="category">UX Design</span>
+                        <div class="bar">
+                            <div class="fill" data-years="19">
+                                <span class="years">19 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-bar">
+                        <span class="category">Spatial Design</span>
+                        <div class="bar">
+                            <div class="fill" data-years="8">
+                                <span class="years">8 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-bar">
+                        <span class="category">AI</span>
+                        <div class="bar">
+                            <div class="fill" data-years="3">
+                                <span class="years">3 yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="proficiencies-subsection">
+                <h2>Proficiencies</h2>
+                <h4>Software, tools, and languages I use</h4>
+                <h5>Design</h5>
+                <div class="proficiencies-logos">
+                    <div class="logo-container">
+                        <img src="files/images/logos/figma.svg" alt="Figma" class="logo">
+                        <span class="tooltip">Figma</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/dribbble.svg" alt="Dribbble" class="logo">
+                        <span class="tooltip">Dribbble</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/behance.svg" alt="Behance" class="logo">
+                        <span class="tooltip">Behance</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/autodesk.svg" alt="Autodesk" class="logo">
+                        <span class="tooltip">Autodesk</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/autodesk-maya.svg" alt="Autodesk Maya" class="logo">
+                        <span class="tooltip">Autodesk Maya</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/blender.svg" alt="Blender" class="logo">
+                        <span class="tooltip">Blender</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/procreate.svg" alt="Procreate" class="logo">
+                        <span class="tooltip">Procreate</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/adobe_creative-cloud.svg" alt="Adobe Creative Cloud" class="logo">
+                        <span class="tooltip">Adobe Creative Cloud</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/adobe_photoshop.svg" alt="Adobe Photoshop" class="logo">
+                        <span class="tooltip">Adobe Photoshop</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/adobe_illustrator.svg" alt="Adobe Illustrator" class="logo">
+                        <span class="tooltip">Adobe Illustrator</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/adobe_premiere.svg" alt="Adobe Premiere" class="logo">
+                        <span class="tooltip">Adobe Premiere</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/adobe_after_effects.svg" alt="Adobe After Effects" class="logo">
+                        <span class="tooltip">Adobe After Effects</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/adobe_indesign.svg" alt="Adobe InDesign" class="logo">
+                        <span class="tooltip">Adobe InDesign</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/adobe_xd.svg" alt="Adobe XD" class="logo">
+                        <span class="tooltip">Adobe XD</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/adobe_dimension.svg" alt="Adobe Dimension" class="logo">
+                        <span class="tooltip">Adobe Dimension</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/adobe_aero.svg" alt="Adobe Aero" class="logo">
+                        <span class="tooltip">Adobe Aero</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/adobe_animate.svg" alt="Adobe Animate" class="logo">
+                        <span class="tooltip">Adobe Animate</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/adobe_stock.svg" alt="Adobe Stock" class="logo">
+                        <span class="tooltip">Adobe Stock</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/adobe_photoshop-express.svg" alt="Adobe Photoshop Express" class="logo">
+                        <span class="tooltip">Adobe Photoshop Express</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/acrobat-reader.svg" alt="Adobe Acrobat" class="logo">
+                        <span class="tooltip">Adobe Acrobat</span>
+                    </div>
+                </div>
+                <h5>Development</h5>
+                <div class="proficiencies-logos">
+                    <div class="logo-container">
+                        <img src="files/images/logos/vs_code.svg" alt="Visual Studio" class="logo">
+                        <span class="tooltip">Visual Studio</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/intellij.svg" alt="IntelliJ" class="logo">
+                        <span class="tooltip">IntelliJ</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/sublime_text.svg" alt="Sublime Text" class="logo">
+                        <span class="tooltip">Sublime Text</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/git.svg" alt="Git" class="logo">
+                        <span class="tooltip">Git</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/github.svg" alt="GitHub" class="logo">
+                        <span class="tooltip">GitHub</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/bitbucket.svg" alt="BitBucket" class="logo">
+                        <span class="tooltip">BitBucket</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/css_3.svg" alt="CSS 3" class="logo">
+                        <span class="tooltip">CSS 3</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/html_5.svg" alt="HTML 5" class="logo">
+                        <span class="tooltip">HTML 5</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/js.svg" alt="Javascript" class="logo">
+                        <span class="tooltip">Javascript</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/react.svg" alt="React" class="logo">
+                        <span class="tooltip">React</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/node_js.svg" alt="NodeJS" class="logo">
+                        <span class="tooltip">NodeJS</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/npm.svg" alt="NPM" class="logo">
+                        <span class="tooltip">NPM</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/amazon.svg" alt="Amazon" class="logo">
+                        <span class="tooltip">Amazon</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/codepen.svg" alt="CodePen" class="logo">
+                        <span class="tooltip">CodePen</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/jquery.svg" alt="JQuery" class="logo">
+                        <span class="tooltip">JQuery</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/c-sharp.svg" alt="C#" class="logo">
+                        <span class="tooltip">C#</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/c-plus-plus.svg" alt="C++" class="logo">
+                        <span class="tooltip">C++</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/php.svg" alt="PHP" class="logo">
+                        <span class="tooltip">PHP</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/Joomla.svg" alt="Joomla" class="logo">
+                        <span class="tooltip">Joomla</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/wordpress.svg" alt="Wordpress" class="logo">
+                        <span class="tooltip">Wordpress</span>
+                    </div>
+                </div>
+                <h5>Productivity</h5>
+                <div class="proficiencies-logos">
+                    <div class="logo-container">
+                        <img src="files/images/logos/google_drive.svg" alt="Google Drive" class="logo">
+                        <span class="tooltip">Google Drive</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/gmail.svg" alt="Gmail" class="logo">
+                        <span class="tooltip">Gmail</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/g-calendar.svg" alt="Google Calendar" class="logo">
+                        <span class="tooltip">Google Calendar</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/google_docs.svg" alt="Google Docs" class="logo">
+                        <span class="tooltip">Google Docs</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/google_maps.svg" alt="Google Maps" class="logo">
+                        <span class="tooltip">Google Maps</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/atlassian.svg" alt="Atlassian" class="logo">
+                        <span class="tooltip">Atlassian</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/confluence.svg" alt="Confluence" class="logo">
+                        <span class="tooltip">Confluence</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/jira.svg" alt="Jira" class="logo">
+                        <span class="tooltip">Jira</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/mailchimp.svg" alt="Mail Chimp" class="logo">
+                        <span class="tooltip">Mail Chimp</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/dropbox.svg" alt="Dropbox" class="logo">
+                        <span class="tooltip">Dropbox</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/ms_excel.svg" alt="Microsoft Excel" class="logo">
+                        <span class="tooltip">Microsoft Excel</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/ms_word.svg" alt="Microsoft Word" class="logo">
+                        <span class="tooltip">Microsoft Word</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/ms_onenote.svg" alt="Microsoft OneNote" class="logo">
+                        <span class="tooltip">Microsoft OneNote</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/ms_outlook.svg" alt="Microsoft Outlook" class="logo">
+                        <span class="tooltip">Microsoft Outlook</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/ms_powerpoint.svg" alt="Microsoft Powerpoint" class="logo">
+                        <span class="tooltip">Microsoft Powerpoint</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/evernote.svg" alt="Evernote" class="logo">
+                        <span class="tooltip">Evernote</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/zendesk.svg" alt="Zendesk" class="logo">
+                        <span class="tooltip">Zendesk</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/notion.svg" alt="Notion" class="logo">
+                        <span class="tooltip">Notion</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/miro.svg" alt="Miro" class="logo">
+                        <span class="tooltip">Miro</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/scrivener.svg" alt="Scrivener" class="logo">
+                        <span class="tooltip">Scrivener</span>
+                    </div>
+                </div>
+                <h5>AI Tools</h5>
+                <div class="proficiencies-logos">
+                    <div class="logo-container">
+                        <img src="files/images/logos/chatgpt.png" alt="ChatGPT" class="logo">
+                        <span class="tooltip">ChatGPT</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/ms-copilot.svg" alt="Microsoft Copilot" class="logo">
+                        <span class="tooltip">Microsoft Copilot</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/github-copilot.svg" alt="Github Copilot" class="logo">
+                        <span class="tooltip">Github Copilot</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/stability-ai.svg" alt="Stability AI" class="logo">
+                        <span class="tooltip">Stability AI</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/midjourney.png" alt="MidJourney" class="logo">
+                        <span class="tooltip">MidJourney</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/leonardo_ai.png" alt="Leonardo AI" class="logo">
+                        <span class="tooltip">Leonardo AI</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/gencraft.png" alt="GenCraft" class="logo">
+                        <span class="tooltip">GenCraft</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/krea.png" alt="KREA" class="logo">
+                        <span class="tooltip">KREA</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/csm.svg" alt="CSM" class="logo">
+                        <span class="tooltip">CSM</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/luma-ai.svg" alt="Luma AI" class="logo">
+                        <span class="tooltip">Luma AI</span>
+                    </div>
+                </div>
+                <h5>Gaming & Spatial Platforms</h5>
+                <div class="proficiencies-logos">
+                    <div class="logo-container">
+                        <img src="files/images/logos/unity.svg" alt="Unity" class="logo">
+                        <span class="tooltip">Unity</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/unreal.svg" alt="Unreal" class="logo">
+                        <span class="tooltip">Unreal</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/roblox.svg" alt="Roblox" class="logo">
+                        <span class="tooltip">Roblox</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/meta.svg" alt="Meta" class="logo">
+                        <span class="tooltip">Meta</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/vive.svg" alt="Vive" class="logo">
+                        <span class="tooltip">Vive</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/zapworks.png" alt="ZapWorks" class="logo">
+                        <span class="tooltip">ZapWorks</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/steam.svg" alt="Steam" class="logo">
+                        <span class="tooltip">Steam</span>
+                    </div>
+                </div>
+                <h5>Messangers & Conferencing</h5>
+                <div class="proficiencies-logos">
+                    <div class="logo-container">
+                        <img src="files/images/logos/teams.svg" alt="Microsoft Teams" class="logo">
+                        <span class="tooltip">Microsoft Teams</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/slack.svg" alt="Slack" class="logo">
+                        <span class="tooltip">Slack</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/ms_skype.svg" alt="Microsoft Skype" class="logo">
+                        <span class="tooltip">Microsoft Skype</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/zoom.svg" alt="Zoom" class="logo">
+                        <span class="tooltip">Zoom</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/discord.svg" alt="Discord" class="logo">
+                        <span class="tooltip">Discord</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/google_meet.svg" alt="Google Meet" class="logo">
+                        <span class="tooltip">Google Meet</span>
+                    </div>
+                </div>
+                <h5>Operating Systems</h5>
+                <div class="proficiencies-logos">
+                    <div class="logo-container">
+                        <img src="files/images/logos/ubuntu.svg" alt="Ubuntu" class="logo">
+                        <span class="tooltip">Ubuntu</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/apple.svg" alt="Apple" class="logo">
+                        <span class="tooltip">Apple OS</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/microsoft.svg" alt="Microsoft Windows" class="logo">
+                        <span class="tooltip">Microsoft Windows</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/android.svg" alt="Android" class="logo">
+                        <span class="tooltip">Android</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/ios.svg" alt="iOS" class="logo">
+                        <span class="tooltip">iOS</span>
+                    </div>
+                    <div class="logo-container">
+                        <img src="files/images/logos/macos.svg" alt="MacOS" class="logo">
+                        <span class="tooltip">MacOS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./files/js/scripts.js"></script>
+</body>
+</html>
