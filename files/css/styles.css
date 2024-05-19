@@ -6,6 +6,7 @@ body, html {
     padding: 0;
     font-family: 'Inter', sans-serif;
     background-color: black;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -426,4 +427,59 @@ nav ul li a.contact-btn {
 
 .logo-container:hover .tooltip {
     opacity: 1;
+}
+
+/********** Referrals Section ************/
+.referrals-section {
+    background-color: #f9f9f9;
+}
+
+.referrals-section h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    background-color: darkgray;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+    padding: 80px;
+}
+
+.referrals-section .footer {
+    background-color: darkgray;
+    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+    padding: 80px;
+}
+
+.referrals-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.referral {
+    width: 48%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.referral img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.referral-info {
+    max-width: calc(100% - 80px);
+}
+
+.referral-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.referral-info p {
+    margin: 5px 0;
 }

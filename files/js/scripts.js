@@ -142,6 +142,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Animate referrals
+    gsap.utils.toArray('.referral').forEach((referral, i) => {
+        gsap.to(referral, {
+            scrollTrigger: {
+                trigger: referral,
+                start: 'top 80%'
+            },
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            delay: i * 0.1
+        });
+    });
 });
 
 // Get all the case study elements
