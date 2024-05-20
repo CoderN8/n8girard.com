@@ -284,6 +284,14 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url('../images/Hydrogen-4.png');
 }
 
+#factory-modal {
+    background-image: url('../images/Factory-2.png');
+}
+
+#aufero-modal {
+    background-image: url('../images/Aufero-1.png');
+}
+
 .close {
     color: #666;
     float: right;
