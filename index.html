@@ -68,9 +68,46 @@
 	<!-- Modal structure (hidden by default) -->
 	<div class="modal" id="modal-hydrogen">
 		<div class="modal-content">
-			<span class="close">&times;</span>
-			<h2>Hydrogen Case Study</h2>
-			<!-- Case study content -->
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Hydrogen Case Study</h2>
+                <p>Company: Hypothetic</p>
+                <p>Duration: Sep 2022 - May 2024 (1yr 9mos)</p>
+                <p>Role: Director of Product</p>
+            </div>
+			<div class="case-study-content">
+                
+                <div class="case-study-image" id="hydrogen-modal">
+                </div>
+                <div class="case-study-text">
+                    <h4>Challenge:</h4>
+                    <p>Company needed a tool for managing hundreds of thousands of 3D assets, finding specific assets efficiently, automatically grouping and organizing those assets, and reviewing the quality of those assets with their team so that they could build training data for 3D ML algorithms.</p>
+                    <h4>Objectives:</h4>
+                    <ul>
+                        <li>Company desired to run training on data it had acquired after it organized the data into suitable collections designed for specific training purposes.</li> 
+                        <li>Company desired to leverage this tool for managing assets for a large third party contract involving 20K assets being generated.</li>
+                        <li>Company desired to leverage this tool as a basis for a web-based asset management and reviewing platform.</li> 
+                    </ul>
+                    <h4>Approach:</h4>
+                    <ul>
+                        <li>Company conducted competitive analysis against multiple 3D Digital Asset Managment Systems (DAMs) on the market, and dissected ML research papers looking for innovative solutions to our problem areas.</li>
+                        <li>Team planned to apply innovative ML search algorithms to solve the search problem, automated labeling, automated organization, and use an AI agent connected to a powerful API and chat interface to put the power in the hands of the user.</li> 
+                        <li>Team planned to leverage multiple Web3 technologies like React, BablylonJS, ThreeJS, and web friendly formats like GLB and GLTF to visualize 3D assets on a web interface and allow teams to comment on their quality.</li> 
+                    </ul>
+                    <h4>Solution:</h4>
+                    <ul>
+                        <li>UX team went through several iterations on the design using Figma focusing on simplicity and clarity and then built prototypes and vetted them with industry professional prospects and customers as well prior to committing to a final design on any one feature as the design evolved along the way throughout the build process.</li>  
+                        <li>Dev team started with Bootstrap but quickly started building a custom component library to replace it due to design demands. </li> 
+                        <li>Dev team also started with BabylonJS but shifted to ThreeJS due to better capabilities, maintenance, and support for more formats.</li> 
+                        <li>Dev team built the entire infrastructure on top of AWS docker containers for easy scaling and deployment.</li> 
+                    </ul>
+                    <h4>Results:</h4>
+                    <ul>
+                        <li>Company was able to <b>curate collections of several thousand 3D assets in days</b> and <b>trained several ML algorithms</b> from them. They were also able to auto-organize assets, automatically detect duplicates, auto-rotate them, auto-tag them, and search for similar in addition to regular search with less than 300 ms latency.</li>
+                        <li>Third party company managed their project with over 20K+ assets, curating them at a <b>5x efficiently gain</b> in a team that spanned the globe, and <b>saved 6+ months on their project timeline.</b></li>
+                        <li>Company <b>deployed the tool</b> for a limited beta release to a select few customers to get feedback prior to deploying to a wider audience their 3D DAM solution.</li>
+                    </ul>
+                </div>
 		</div>
 	</div>
 

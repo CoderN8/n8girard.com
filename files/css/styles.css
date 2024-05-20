@@ -246,18 +246,46 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+.modal-header{
+        margin: 0;
+        background-color: darkgray;
+        clip-path: polygon(0% 0%, 0% 100%, 100% 40%, 100% 0%);
+        padding: 40px;
+}
+
+.modal-header h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
 .modal-content {
     background-color: #fff;
     margin: 15% auto;
-    padding: 20px;
     border: 1px solid #888;
     width: 80%;
     max-width: 800px;
     position: relative;
 }
 
+.case-study-content{
+    padding: 20px;
+    line-height: 1.5;
+}
+
+.modal-content .case-study-image{
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+#hydrogen-modal {
+    background-image: url('../images/Hydrogen-4.png');
+}
+
 .close {
-    color: #aaa;
+    color: #666;
     float: right;
     font-size: 28px;
     font-weight: bold;
