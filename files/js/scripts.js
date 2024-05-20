@@ -24,6 +24,36 @@ window.addEventListener('load', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Nav bar animations
+    const navLinks = document.querySelectorAll('#main-nav a');
+    const sections = document.querySelectorAll('section');
+
+    // Smooth scrolling for navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    function updateNav() {
+        let index = sections.length;
+
+        while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+        navLinks.forEach((link) => link.classList.remove('selected'));
+        navLinks[index].classList.add('selected');
+    }
+
+    updateNav();
+    window.addEventListener('scroll', updateNav);
+    
+    
     gsap.registerPlugin(ScrollTrigger);
 
     // Title animation
@@ -156,6 +186,20 @@ document.addEventListener('DOMContentLoaded', () => {
             delay: i * 0.1
         });
     });
+
+     // Animate blog posts
+     gsap.utils.toArray('.blog-post').forEach((post, i) => {
+        gsap.to(post, {
+            scrollTrigger: {
+                trigger: post,
+                start: 'top 80%'
+            },
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            delay: i * 0.1
+        });
+    });
 });
 
 // Get all the case study elements
@@ -186,3 +230,33 @@ window.onclick = function(event) {
         }
     });
 }
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            form.reset();
+            alert('Thank you for your message!');
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    alert(data["errors"].map(error => error["message"]).join(", "));
+                } else {
+                    alert('Oops! There was a problem submitting your form');
+                }
+            });
+        }
+    }).catch(error => {
+        alert('Oops! There was a problem submitting your form');
+    });
+});

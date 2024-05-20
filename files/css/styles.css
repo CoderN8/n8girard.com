@@ -31,31 +31,44 @@ h1, h2, h3, h4, h5, h6 {
 	margin-left: 20px;
 }
 
-nav ul {
+#main-nav ul {
     list-style: none;
+    padding: 0;
     display: flex;
-    gap: 20px;
-    margin: 0 20px;
+    gap: 10px;
+    margin-right: 20px;
 }
 
-nav ul li a {
-    color: #fff;
+#main-nav li {
+    position: relative;
+}
+
+#main-nav a {
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #fff;
 }
 
-nav ul li a:hover, nav ul li a:active {
-	text-decoration: underline;
+#main-nav a:hover {
+    background-color: #555;
 }
 
-nav ul li a.contact-btn {
-    border: 1px solid #fff;
-    border-radius: 25px;
-    background-color: white;
+#main-nav a.contact-btn {
+    background-color: #D6B161;
     color: black;
-    font-weight: 700;
-    text-transform: uppercase;
 }
+
+#main-nav a.contact-btn:hover {
+    background-color: #c09b4c;
+}
+
+#main-nav a.selected {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
 
 /************** ABOUT ME *************************************/
 
@@ -120,12 +133,12 @@ nav ul li a.contact-btn {
 }
 
 .about-section .text h5{
-	margin: 0 0 20px 0;
+	margin: 0 0 5vh 0;
 	font-size: 1rem;
 }
 
 .about-section .text blockquote {
-    margin: 10vh 0;
+    margin: 0 0 5vh 0;
 }
 
 .about-section .text .social-links {
@@ -431,7 +444,7 @@ nav ul li a.contact-btn {
 
 /********** Referrals Section ************/
 .referrals-section {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 .referrals-section h2 {
@@ -452,7 +465,7 @@ nav ul li a.contact-btn {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px;
+    padding: 40px;
 }
 
 .referral {
@@ -482,4 +495,148 @@ nav ul li a.contact-btn {
 
 .referral-info p {
     margin: 5px 0;
+}
+
+/********** Blog Section ************/
+.blog-section {
+    background-color: #ffffff;
+    margin-top: -1px;
+}
+
+.blog-section h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    background-color: darkgray;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+    padding: 80px;
+}
+
+.referrals-section .footer {
+    background-color: darkgray;
+    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+    padding: 80px;
+}
+
+.blog-container {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blog-post {
+    width: 48%;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.blog-post a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-post img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.blog-post:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.blog-info {
+    padding: 10px 0;
+}
+
+.blog-info h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.blog-info p {
+    margin: 5px 0 10px 0;
+}
+
+.blog-info .authorDate{
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.blog-info p:last-of-type {
+    color: #007BFF;
+}
+
+.blog-section .footer {
+    background-color: black;
+    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+    padding: 80px;
+    margin-bottom: -1px;
+}
+
+/********** Contact me ************/
+.contact-section {
+    padding: 50px 20px;
+    background-color: #000000;
+    text-align: center;
+    height: calc(100vh - 140px);
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #000000;
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #D6B161;
+    color: black;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c09b4c;
+}
+
+/********** Footer ************/
+.footer {
+    background-color: #666;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
 }
