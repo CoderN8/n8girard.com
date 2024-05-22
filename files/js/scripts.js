@@ -53,6 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNav();
     window.addEventListener('scroll', updateNav);
     
+    const video = document.getElementById('demo-video');
+
+    video.addEventListener('mouseleave', () => {
+        video.pause();
+    });
+
+    // Hamburger menu
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('#main-nav ul');
+
+    hamburgerMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+    });
     
     gsap.registerPlugin(ScrollTrigger);
 
@@ -72,11 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Case study animations
     const caseStudies = document.querySelectorAll('.case-study');
     caseStudies.forEach((study, index) => {
-        gsap.fromTo(study, 
-		{
-            opacity: 0,
-			clipPath: 'polygon(0% 0%, 0% 0%, 0% 50%, 0% 50%)',
-		},
+        gsap.to(study, 
 		{
             scrollTrigger: {
                 trigger: study,
@@ -101,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
             scrub: true,
         },
         opacity: 1,
-        clipPath: 'polygon(0% 0%, 70% 0%, 65% 100%, 0% 100%)',
         duration: 1,
     });
     gsap.from('.video-wrapper', {
@@ -230,6 +238,48 @@ window.onclick = function(event) {
         }
     });
 }
+
+function handleAnimations() {
+    const caseStudies = document.querySelectorAll('.case-study');
+
+    if (window.innerWidth < 950) {
+        // Remove or change clip-path animation for screens below 950px
+        caseStudies.forEach((study) => {
+            gsap.to(study, {
+                clipPath: 'polygon(0px 0px, 100% 0%, 100% 100%, 0% 100%)',
+                opacity: 1
+            });
+        });
+    } else {
+        // Original GSAP animation for larger screens
+        caseStudies.forEach((study) => {
+            gsap.to(study, {
+                clipPath: 'polygon(0 0, 100% 50%, 100% 100%, 0% 50%)',
+                opacity: 1,
+                duration: 1,
+                delay: index * 0.2, // Offset timing for each section
+                scrollTrigger: {
+                    trigger: study,
+                    start: "top 75%",
+                    toggleActions: "play none none none"
+                }
+            });
+            study.addEventListener('click', (e) => {
+                const modalId = `modal-${e.currentTarget.id}`;
+                document.getElementById(modalId).style.display = 'block';
+            });
+        });
+        
+    }
+}
+
+// Initial check
+handleAnimations();
+
+// Re-apply on window resize
+window.addEventListener('resize', handleAnimations);
+
+
 
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();

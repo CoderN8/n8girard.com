@@ -22,13 +22,12 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0px;
+    padding: 10px 20px;
     z-index: 1000;
 }
 
 .fixed-header .mylogo {
     height: 40px;
-	margin-left: 20px;
 }
 
 #main-nav ul {
@@ -36,7 +35,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     display: flex;
     gap: 10px;
-    margin-right: 20px;
 }
 
 #main-nav li {
@@ -68,7 +66,18 @@ h1, h2, h3, h4, h5, h6 {
     color: #000000;
 }
 
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
 
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
 
 /************** ABOUT ME *************************************/
 
@@ -112,6 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 	right: 0;
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
+    text-align: left;
     padding: 0 10vw 0 20vw;
 	height: 100vh;
     opacity: 0;
@@ -319,7 +329,7 @@ h1, h2, h3, h4, h5, h6 {
 .demo-reel-section .headingbar{
     margin: 50px 0;
     background-color: #666;
-    clip-path: polygon(0% 0%, 0% 0%, -5% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 70% 0%, 65% 100%, 0% 100%);
     width: 100%;
     padding: 12px 0;
     line-height: 30px;
@@ -353,7 +363,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/td_reel1_crop.jpg') no-repeat center center/cover;
+    background: url('../images/DemoReelPoster.png') no-repeat center center/cover;
     filter: grayscale(1);
     opacity: 1;
     transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -736,4 +746,135 @@ button:hover {
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1100px) {
+    .about-section .text, .case-study, .modal-header,
+    .referrals-section h2, .referrals-section .footer, .blog-section h2, .blog-section .footer, .contact-section {
+        clip-path: none;
+    }
+    .about-section .text{
+        height: auto;
+        bottom: 0;
+        padding: 0 40px 40px 40px;
+    }
+
+    .about-section .text h1 {
+        margin: 40px 0 20px 0;
+    }
+
+    .about-section .text h5 {
+        margin: 0 0 40px 0;
+    }
+
+    .case-studies{
+        margin-bottom: 0;
+    }
+
+    .case-studies h2{
+        margin-bottom: 40px;
+    }
+
+    .case-study{
+        margin-bottom: 0;
+        height: 200px;
+        clip-path: none !important;
+    }
+
+    .case-study:hover {
+        clip-path: none !important;
+    }
+
+}
+
+/* Blog posts and referrals single-column layout for screens smaller than 950px */
+@media (max-width: 950px) {
+    #main-nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+    }
+
+    #main-nav ul.show {
+        display: flex;
+        margin-top: 0;
+        padding: 10px;
+    }
+
+    #main-nav li {
+        padding: 4px 0;
+        height: 40px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        margin-right: 20px;
+    }
+
+    .experience-wrapper {
+        flex-direction: column;
+    }
+
+    .experience-subsection, .proficiencies-subsection {
+        width: 96%;
+    }
+
+    .about-section .text{
+        left: 0;
+    }
+
+    /* Styles for sections to be single-column on small screens */
+    .about-section, .case-studies, .experience-section, .demo-reel-section {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .about-section .text, .case-studies .case-study, .experience-wrapper {
+        flex-direction: column;
+    }
+
+    .about-section .text, .experience-subsection, .proficiencies-subsection {
+        width: calc(100%-40px);
+    }
+
+    .case-study {
+        clip-path: polygon(0px 0px, 100% 0%, 100% 100%, 0% 100%);
+        opacity: 1;
+    }
+
+    .demo-reel-section .headingbar {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        opacity: 1;
+    }
+
+    .skills-section .intro p{
+        max-width: 100%;
+    }
+
+    .blog-section .blog-posts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .blog-section .blog-post {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .referrals-section .referrals {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .referrals-section .referral {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
 }
