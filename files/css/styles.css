@@ -7,6 +7,7 @@ body, html {
     font-family: 'Inter', sans-serif;
     background-color: black;
     overflow-x: hidden;
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -390,7 +391,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .experience-section h5{
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'Inter', sans-serif;
 }
 
@@ -419,7 +420,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .bar {
@@ -839,7 +840,7 @@ button:hover {
     }
 
     .about-section .text, .experience-subsection, .proficiencies-subsection {
-        width: calc(100%-40px);
+        width: 90%;
     }
 
     .case-study {
@@ -876,5 +877,29 @@ button:hover {
     .referrals-section .referral {
         width: 100%;
         margin: 0 0 20px 0;
+    }
+}
+
+
+@media (max-width: 550px) {
+    body, html {
+        font-size: 10px;
+    }
+    .about-section .text{
+        height: auto;
+        top: 300px;
+        padding: 0 40px 40px 40px;
+    }
+
+    .about-section .text h1 {
+        margin: 40px 0 20px 0;
+    }
+
+    .about-section .text h5 {
+        margin: 0 0 40px 0;
+    }
+
+    .case-studies h2{
+        font-size: 3em;
     }
 }
