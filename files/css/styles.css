@@ -850,6 +850,7 @@ button:hover {
         left: 0;
         bottom: auto;
         padding: 0 40px 40px 40px;
+        flex-direction: column;
     }
 
     .about-section .text h1 {
@@ -866,12 +867,15 @@ button:hover {
         text-align: center;
     }
 
-    .about-section .text, .case-studies .case-study, .experience-wrapper {
+    .case-studies .case-study, .experience-wrapper {
         flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
     }
 
     .experience-subsection, .proficiencies-subsection {
-        width: 90%;
+        width: 80%;
     }
 
     .case-study {
