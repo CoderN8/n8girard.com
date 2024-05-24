@@ -21,11 +21,47 @@
     <meta name="msapplication-TileImage" content="./files/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/ico" href="favicon.ico">
-    <title>Nate Girard - Portfolio v8</title>
+    <title>Nate Girard - UX Designer, Product Manager, and Developer</title>
+    <meta name="description" content="Explore the portfolio of Nate Girard, a skilled UX Designer, Product Manager, and Developer. Discover case studies, blog posts, and insights into his extensive experience in UX, product management, development, and 3D design.">
+    <meta name="keywords" content="Nate Girard, UX Designer, Product Manager, Developer, Portfolio, Case Studies, Blog, User Experience, Product Management, Development, 3D Design, Director">
+    <meta name="author" content="Nate Girard">
+    <meta property="og:title" content="Nate Girard - UX Designer, Product Manager, and Developer">
+    <meta property="og:description" content="Explore the portfolio of Nate Girard, showcasing skills in UX design, product management, development, and 3D design.">
+    <meta property="og:image" content="https://n8girard.com/files/images/N8Girard_twitter.png">
+    <meta property="og:url" content="https://n8girard.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nate Girard - UX Designer, Product Manager, and Developer">
+    <meta name="twitter:description" content="Discover Nate Girard's portfolio, featuring case studies and blog posts in UX design, product management, and development.">
+    <meta name="twitter:image" content="https://n8girard.com/files/images/N8Girard_twitter.png">
+    <link rel="canonical" href="https://n8girard.com/">
+    <meta name="robots" content="index, follow">
+
 	<link href="https://fonts.googleapis.com/css2?family=Headland+One&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./files/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Nate Girard",
+          "url": "https://n8girard.com/",
+          "image": "https://n8girard.com/files/images/N8Girard_profile.png",
+          "sameAs": [
+            "https://www.linkedin.com/in/n8girard/",
+            "https://medium.com/@n8girard",
+            "https://twitter.com/n8girard",
+            "https://www.behance.net/n8girard",
+            "https://dribbble.com/N8Girard"
+          ],
+          "jobTitle": "Director of Product, UX Designer, Product Manager, Developer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Hypothetic"
+          }
+        }
+        </script>
 </head>
 <body>
     <header class="fixed-header">
@@ -100,8 +136,14 @@
                 <p>Role: Director of Product</p>
             </div>
 			<div class="case-study-content">
-                
-                <div class="case-study-image" id="hydrogen-modal">
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <video id="hydrogen-video" controls poster="./files/images/Hydrogen-4.png">
+                            <source src="./files/videos/HydrogenCaseStudy.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div id="hydrogen-poster" class="video-poster"></div>
+                    </div>
                 </div>
                 <div class="case-study-text">
                     <h4>Challenge:</h4>
@@ -146,8 +188,14 @@
                 <p>Role: Director of Product</p>
             </div>
 			<div class="case-study-content">
-                
-                <div class="case-study-image" id="factory-modal">
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <video id="factory-video" controls poster="./files/images/Factory-2.png">
+                            <source src="./files/videos/FactoryCaseStudy.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div id="factory-poster" class="video-poster"></div>
+                    </div>
                 </div>
                 <div class="case-study-text">
                     <h4>Challenge:</h4>
@@ -192,7 +240,14 @@
                 <p>Role: Chief Experience Officer</p>
             </div>
 			<div class="case-study-content">
-                <div class="case-study-image" id="aufero-modal">
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <video id="aufero-video" controls poster="./files/images/Aufero-1.png">
+                            <source src="./files/videos/AuferoCaseStudy.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div id="aufero-poster" class="video-poster"></div>
+                    </div>
                 </div>
                 <div class="case-study-text">
                     <h4>Challenge:</h4>
@@ -237,7 +292,7 @@
                     <source src="./files/videos/DemoReel2024.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div class="video-poster"></div>
+                <div id="demo-poster" class="video-poster"></div>
             </div>
         </div>
     </section>

@@ -53,10 +53,26 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNav();
     window.addEventListener('scroll', updateNav);
     
-    const video = document.getElementById('demo-video');
+    const demoVideo = document.getElementById('demo-video');
 
-    video.addEventListener('mouseleave', () => {
-        video.pause();
+    demoVideo.addEventListener('mouseleave', () => {
+        demoVideo.pause();
+    });
+
+    const hydrogenVideo = document.getElementById('hydrogen-video');
+
+    hydrogenVideo.addEventListener('mouseleave', () => {
+        hydrogenVideo.pause();
+    });
+    const factoryVideo = document.getElementById('factory-video');
+
+    factoryVideo.addEventListener('mouseleave', () => {
+        factoryVideo.pause();
+    });
+    const auferoVideo = document.getElementById('aufero-video');
+
+    auferoVideo.addEventListener('mouseleave', () => {
+        auferoVideo.pause();
     });
 
     // Hamburger menu
